@@ -1,0 +1,2 @@
+here_command: /tp2p %target% %self%
+there_command: /tp2p %self% %target%

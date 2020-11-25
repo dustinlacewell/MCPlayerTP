@@ -1,0 +1,9 @@
+main: "com.ldlework.mc.PlayerTP.PluginEntry"
+version: "0.1"
+name: "PlayerTP"
+commands:
+  ptp:
+    description: List TP links for online players
+    usage: /ptp
+    permission: playertp.ptp
+    permission-message: You don't have permission.
