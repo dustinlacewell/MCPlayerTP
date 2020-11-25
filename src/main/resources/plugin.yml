@@ -1,9 +1,15 @@
-main: "com.ldlework.mc.PlayerTP.PluginEntry"
+main: "com.ldlework.mc.PlayerTP.PlayerTP"
 version: "0.1"
 name: "PlayerTP"
+api-version: 1.16
 commands:
-  ptp:
-    description: List TP links for online players
-    usage: /ptp
-    permission: playertp.ptp
+  here:
+    description: Teleport a player to you
+    usage: /here [player]
+    permission: playertp.here
+    permission-message: You don't have permission.
+  there:
+    description: Teleport to a player
+    usage: /there [player]
+    permission: playertp.there
     permission-message: You don't have permission.

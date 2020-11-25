@@ -22,4 +22,4 @@ if [ ! -f $PAPER_JAR ]; then
   wget -O $PAPER_JAR $PAPER_LNK
 fi
 
-java -jar $PAPER_JAR
+java -jar $PAPER_JAR -nogui
