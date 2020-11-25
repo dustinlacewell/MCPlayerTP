@@ -1,5 +1,7 @@
 # PlayerTP
 
+**This plugin requires Java 11**
+
 Teleport to any online player, or teleport them to you.
 
 Simply use the `/ptp` command to get a list of players.
