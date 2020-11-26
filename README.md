@@ -2,14 +2,15 @@
 
 **This plugin requires Java 11**
 
-Teleport to any online player, or teleport them to you.
+## Commands
 
-Simply use the `/ptp` command to get a list of players.
+ Both commands take an optional player name. If omitted a GUI is presented for selecting a user.
 
-Click the `[here]` link to teleport the player to you.
+- `/here [player]` - Teleport player to you
+- `/there [player]` - Teleport to player
 
-Click the `[there]` to teleport to the player.
 
 ## Permissions
 
-- `playertp.ptp`
+- `playertp.here` - Can use `/here`
+- `playertp.there` - Can use `/there`
