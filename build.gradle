@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.ldlework.mc.PlayerTP'
-version '0.1-SNAPSHOT'
+version '0.1.1'
 
 // === Change this to match the workspace defined inside the start.sh script.
 String workspace = '.papermc'
@@ -21,21 +21,19 @@ repositories() {
 
 compileJava {
     options.compilerArgs += ["-parameters"]
-//    options.fork = true
-//    options.forkOptions.executable = 'javac'
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    implementation group: 'com.destroystokyo.paper', name: 'paper-api', version: '1.16.4-R0.1-SNAPSHOT'
-    implementation "co.aikar:acf-paper:0.5.0-SNAPSHOT" // Replace PLATFORM with bukkit, paper, sponge, etc
-    implementation group: 'de.themoep', name: 'inventorygui', version: '1.4.2-SNAPSHOT'
+    compileOnly group: 'com.destroystokyo.paper', name: 'paper-api', version: '1.16.4-R0.1-SNAPSHOT'
+    implementation 'co.aikar:acf-paper:0.5.0-SNAPSHOT' // Replace PLATFORM with bukkit, paper, sponge, etc
+    implementation 'de.themoep:inventorygui:1.4.2-SNAPSHOT'
 }
 
 shadowJar {
     String userHome = System.properties['user.home']
     destinationDirectory = file("$userHome/$workspace/plugins")
-    archiveFileName = project.name + ".jar"
+    archiveFileName = project.name + "-" + version + ".jar"
     relocate 'co.aikar.commands', 'com.ldlework.mc.PlayerTP.acf'
     relocate 'co.aikar.locales', 'com.ldlework.mc.PlayerTP.locales'
 }
